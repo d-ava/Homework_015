@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.homework_015.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/actionToEditProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.homework_015.EditProfileFragment"
+        android:label="EditProfileFragment" >
+        <action
+            android:id="@+id/actionToProfileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>
